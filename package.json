@@ -21,6 +21,7 @@
   "dependencies": {
     "sass": "^1.43.2",
     "sirv-cli": "^1.0.0",
-    "svelte-navigator": "^3.1.5"
+    "svelte-navigator": "^3.1.5",
+    "uuid": "^8.3.2"
   }
 }

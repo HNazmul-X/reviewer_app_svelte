@@ -1,14 +1,12 @@
 <script>
-    import { createEventDispatcher } from "svelte";
+    import { FeedBackStore } from "../store/FeedbackStore";
 
     import Card from "./card.svelte";
     export let item = {};
-    const dispatch = createEventDispatcher()
 
     const handleDelete = (itemId) => {
-        dispatch("delete-feedback",itemId)
+        FeedBackStore.update((currentFeedback) => currentFeedback.filter((fb) => fb.id !== itemId));
     };
-
 </script>
 
 <Card>
@@ -18,7 +16,7 @@
 </Card>
 
 <style lang="scss">
-    $color: red;
+    $color: #FF3C00;
     .num-display {
         position: absolute;
         top: 0px;
